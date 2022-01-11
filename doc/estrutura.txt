@@ -1,0 +1,5 @@
+web = arquivos PHP, JS, HTML
+img - arquivos de imagens
+css - arquivos de estilos
+lib - arquivis de Bibliotecas, classes.
+doc - arquivos que nao fazem parte da pagina da execuçao do app

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Alterar album</title>
+</head>
+<body>
+    <header>
+        <a href="read.php"><button type="submit">LISTAR ALBUNS</button></a>
+        <a href="../index.html"><button type="submit">HOME</button></a>
+    </header>
+    <section id="create">   
+        <form action="create.php" method="POST" enctype="multipart/form-data">
+            <label>Titulo</label>
+            <input type="text" id="titulo "name="titulo" required><br>
+            <label>Banda</label>
+            <input type="text" id="banda" name="banda" required><br>
+            <label>Ano</label>
+            <input type="text" id="ano "name="ano" minlength="4" maxlength="4" required><br>
+            <label>Capa</label>
+            <input type="file" id="capa" name="capa"><br>
+            <button type="submit" id="buttonCadastrar" name="buttonCadastrar">CADASTRAR</button>
+        </form>
+    </section>
+    <footer>
+
+
+    </footer> 
+</body>
+</html>
