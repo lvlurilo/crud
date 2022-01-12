@@ -30,7 +30,7 @@ if(isset($_POST['buttonCadastrar'])){
     }
 }
 
-$album = new album($titulo, $banda, $ano, $arqName);
+$album = new album($id, $titulo, $banda, $ano, $arqName);
 
 $crud = new crud();
 $crud->create($album);

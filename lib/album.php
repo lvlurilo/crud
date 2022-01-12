@@ -7,8 +7,8 @@ class album {
     private $ano;
     private $capa;
 
-    public function __construct($t, $b, $a, $c){
-        //$this->setId($i);
+    public function __construct($i, $t, $b, $a, $c){
+        $this->setId($i);
         $this->setTitulo($t);
         $this->setBanda($b);
         $this->setAno($a);
