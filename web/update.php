@@ -1,50 +1,46 @@
-<?php 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Alterar album</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button type="submit">HOME</button></a>
+        <a href="read.php"><button type="submit">LISTAR ALBUNS</button></a>
+    </header>
 
-require_once('../lib/conexao.php');
-require_once('../lib/album.php');
-require_once('../lib/crud.php');
+<?php
 
-$id = $_POST['id'];
-$titulo = $_POST['titulo'];
-$banda = $_POST['banda'];
-$ano = $_POST['ano'];
-$capa = $_POST['capa'];
-
-if(isset($_FILES['newcapa'])){
-    $arqimg = "../img/".$capa;
-    unlink($arqimg);
-    $capa = $_FILES['newcapa'];
-
-
-if(isset($_POST['buttonEditar'])){
-    $formatos = array("jpg", "jpeg", "png");
-    $extensao = pathinfo($_FILES['newcapa']['name'], PATHINFO_EXTENSION);
-
-    if(in_array($extensao, $formatos)){
-        $pasta = "../img/";
-        $temp = $_FILES['newcapa']['tmp_name'];
-        $arqName = uniqid().".$extensao";
-
-        if(move_uploaded_file($temp, $pasta.$arqName)){
-            $msg = "";
-        }else{
-            $msg = "não foi possivel fazer o upload do arquivo";
-        }
-
-    }else{
-        $msg = "formato não permitido";
-    }
-}
-
-}else{
-    $arqName = $capa;
-}
-
-$album = new album($id, $titulo, $banda, $ano, $arqName);
-
-$crud = new crud();
-$crud->update($album);
-
-header("location:index.php");
+isset($_POST['id']) ? $id = $_POST['id'] : "";
+//isset($_POST['capa']) ? $capa = $_POST['capa'] : "";
 
 ?>
+
+    <section id="update">   
+        <form action="setupdate.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo $id?>">
+            <label>Titulo</label>
+            <input type="text" id="titulo "name="titulo" value="<?php echo $_POST['titulo'] ?>" required><br>
+            <label>Banda</label>
+            <input type="text" id="banda" name="banda" value="<?php echo $_POST['banda'] ?>" required><br>
+            <label>Ano</label>
+            <input type="text" id="ano "name="ano" minlength="4" maxlength="4" value="<?php echo $_POST['ano'] ?>" required><br>
+            <!-- <label>Capa Atual</label>
+            <input type="hidden" name="capa" id="capa" value="">
+            <img src="../img/"><br>
+            <label>Nova Capa</label>
+            <input type="file" id="newcapa" name="newcapa"><br> -->
+            <button type="submit" id="buttonEditar" name="buttonEditar">EDITAR</button>
+        </form>
+    </section>
+
+    <footer>
+
+
+    </footer> 
+</body>
+</html>
