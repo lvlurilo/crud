@@ -7,13 +7,13 @@ class crud{
 
     public function create(album $a){
 
-        $sql = 'INSERT INTO albuns (titulo, banda, ano) values (?, ?, ?)';
+        $sql = 'INSERT INTO albuns (titulo, banda, ano, capa) values (?, ?, ?, ?)';
         $stmt = conexao::getCon()->prepare($sql);
 
         $stmt->bindValue(1, $a->getTitulo());
         $stmt->bindValue(2, $a->getBanda());
         $stmt->bindValue(3, $a->getAno());
-       // $stmt->bindValue(4, $a->getCapa());
+        $stmt->bindValue(4, $a->getCapa());
 
         $stmt->execute();
 
@@ -36,14 +36,14 @@ class crud{
 
     public function update(album $a){
 
-        $sql = 'UPDATE albuns SET titulo = ?, banda = ?, ano = ? WHERE id = ?';
+        $sql = 'UPDATE albuns SET titulo = ?, banda = ?, ano = ?, capa = ? WHERE id = ?';
         $stmt = conexao::getCon()->prepare($sql);
 
         $stmt->bindValue(1, $a->getTitulo());
         $stmt->bindValue(2, $a->getBanda());
         $stmt->bindValue(3, $a->getAno());
-        //$stmt->bindValue(4, $a->getCapa());
-        $stmt->bindValue(4, $a->getId());
+        $stmt->bindValue(4, $a->getCapa());
+        $stmt->bindValue(5, $a->getId());
 
         $stmt->execute();
 

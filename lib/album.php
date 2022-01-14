@@ -5,14 +5,14 @@ class album {
     private $titulo;
     private $banda;
     private $ano;
-  //  private $capa;
+    private $capa;
 
-    public function __construct($i, $t, $b, $a){
+    public function __construct($i, $t, $b, $a, $c){
         $this->setId($i);
         $this->setTitulo($t);
         $this->setBanda($b);
         $this->setAno($a);
-     //   $this->setCapa($c);
+        $this->setCapa($c);
     }
 
     public function setId($i){
@@ -47,13 +47,13 @@ class album {
         return $this->ano;
     }
 
-    // public function setCapa($c){
-    //     $this->capa = $c;
-    // }
+    public function setCapa($c){
+        $this->capa = $c;
+    }
 
-    // public function getCapa(){
-    //     return $this->capa;
-    // }
+    public function getCapa(){
+        return $this->capa;
+    }
 }
 
 ?>

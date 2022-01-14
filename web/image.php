@@ -1,8 +1,8 @@
 <?php
 
-function capa($capa){
+function capa($c){
 
-    if(isset($_POST['buttonCadastrar'])){
+    if(isset($c)){
         $formatos = array("jpg", "jpeg", "png");
         $extensao = pathinfo($_FILES['capa']['name'], PATHINFO_EXTENSION);
     
@@ -20,6 +20,8 @@ function capa($capa){
         }else{
             $msg = "formato não permitido";
         }
+    }else{
+        $arqName = "vazio";
     }
     
     return $arqName;
@@ -27,11 +29,11 @@ function capa($capa){
 }
 
 
-function newcapa($capa, $newcapa){
+function newcapa($c, $nc){
 
-if(isset($_FILES['newcapa'])){
-    $arqimg = "../img/".$capa;
-    unlink($arqimg);
+if(isset($nc)){
+    $arqimgdelete = "../img/".$c;
+    unlink($arqimgdelete);
 
     $formatos = array("jpg", "jpeg", "png");
     $extensao = pathinfo($_FILES['newcapa']['name'], PATHINFO_EXTENSION);
@@ -52,7 +54,7 @@ if(isset($_FILES['newcapa'])){
     }
 
 }else{
-    $arqName = $capa;
+    $arqName = "vazio";
 }
 
 return $arqName;

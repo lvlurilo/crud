@@ -6,10 +6,10 @@ require_once('../lib/crud.php');
 
 
 $id = $_GET['id'];
-// $capa = $_GET['capa'];
+$capa = $_GET['capa'];
 
-// $arqimg = "../img/".$capa;
-// unlink($arqimg);
+$arqimgdelete = "../img/".$capa;
+unlink($arqimgdelete);
 
 $crud = new crud();
 $crud->delete($id);
