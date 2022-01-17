@@ -16,7 +16,7 @@ header{
 }
 
 section{
-    text-align: center;
+    text-align: left;
     height: 530px;
     background-color: #02040f;
 }
@@ -75,10 +75,18 @@ a:hover{
 
 .btn:hover{
     background-color: rgb(255, 250, 250);
-
 }
 
-h1#titulo{
-    color: snow;
-    font-size: 60pt;
+.title{
+    color: #76947e;
+    font-size: 64pt;
+    position: absolute;
+    left: 80px;
+    top: 260px;
+    transition: font-size 60s;
+    cursor: default;
+}
+
+.title:hover{
+    font-size: 86pt;
 }

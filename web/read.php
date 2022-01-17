@@ -16,7 +16,7 @@
             <a href="../index.html">HOME</a>
             <a href="create.html">CADASTRAR NOVO ALBUM</a>
     </header>
-    <section>   
+       
     <?php 
         require_once('../lib/conexao.php');
         require_once('../lib/album.php');
@@ -26,6 +26,7 @@
         $crud->read();
 
         foreach($crud->read() as $album){?>
+        <section>
             <div class="capa">
                 <img src= "../img/<?php echo $album['capa']?>" alt="<?php $album['titulo']?>"><br>
             <div>
@@ -51,12 +52,13 @@
                     <button type="submit" class="btn" id="excluir">EXCLUIR</button>
                 </form>
                 </div>
+        </section>
         <?php
-        }?>
-           
-    </section>
+        }?>   
     <footer>
         <p>github.com/lvlurilo</p>
     </footer> 
+
 </body>
 </html>
+
