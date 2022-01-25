@@ -12,31 +12,34 @@
     <title>Novo album</title>
 </head>
 <body>
+
     <header>
             <a href="../index.html">HOME</a>
-            <a href="create.html">CADASTRAR NOVO ALBUM</a>
+            <a href="create.php">CADASTRAR NOVO ALBUM</a>
     </header>
-       
-    <?php 
+    <div class="main"> 
+        <?php 
         require_once('../lib/conexao.php');
         require_once('../lib/album.php');
         require_once('../lib/crud.php');
-
+        
         $crud = new crud();
         $crud->read();
-
+    
         foreach($crud->read() as $album){?>
         <section>
             <div class="capa">
                 <img src= "../img/<?php echo $album['capa']?>" alt="<?php $album['titulo']?>"><br>
             <div>
-            <div class="fomrulario">
-                <div class="info">
-                    <?php
-                    echo $album['titulo']."<br>".$album['banda']."<br>".$album['ano']."<br>";
-                    $album['id'];
-                    ?>
-                </div>
+            <div class="info">
+                <?php
+                echo $album['titulo']."<br>"
+                .$album['banda']."<br>"
+                .$album['ano']."<br>";
+                $album['id'];
+                ?>
+            </div>
+            <div class="button">
                 <form action="update.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $album['id']?>">
                     <input type="hidden" name="titulo" value="<?php echo $album['titulo']?>">
@@ -51,10 +54,11 @@
                     <input type="hidden" name="capa" value="<?php echo $album['capa']?>">
                     <button type="submit" class="btn" id="excluir">EXCLUIR</button>
                 </form>
-                </div>
+            </div>
         </section>
         <?php
         }?>   
+    </div>
     <footer>
         <p>github.com/lvlurilo</p>
     </footer> 

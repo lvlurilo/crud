@@ -23,7 +23,6 @@ O usuário deve inserir uma imagem da capa, o título, o nome da banda e o ano e
 
 - Inserir alertas ao excluir e editar os álbuns;
 - Aperfeiçoar o botão de inserir e editar a imagem de capa do álbum;
-- Revisar o espaçamento entre os albuns listados.
 
 
 
