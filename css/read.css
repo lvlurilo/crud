@@ -11,6 +11,12 @@ body{
 img{
     width: 250px;
     height: 250px;
+    transition: width height 2s;
+}
+
+img:hover{
+    width: 252px;
+    height: 252px;
 }
 
 header{
@@ -96,11 +102,10 @@ a:hover{
     bottom: 0px;
     margin: auto;
     background-color:#02040f;
-    border-color: #76947e;
-    border-style: solid;
-    border-width: 1px;
     color: black;
 }
+
+
 
 .info{
     color: #76947e;

@@ -19,9 +19,26 @@ header{
     background-color: black;
 }
 
+.main{
+    display: flex; /*uso de flex*/
+    flex-direction: row; /*alinhamento em linha/coluna*/
+    justify-content: space-around; /*alinhamento horizontal*/
+    align-items: center; /*alinhamento vertical*/
+    flex-wrap: wrap; /*quebra linha*/
+    height: 100%;
+    width: 100%;
+    background-color: #02040f;
+    position: relative;
+    top: 50px;
+}
+
 section{
+    margin-top: 30px;
+    padding-top: 10px;
+    margin-bottom: 50px;
     text-align: center;
-    height: 530px;
+    height: 400px;
+    width: 33%;
     background-color: #02040f;
 }
 
@@ -92,7 +109,7 @@ a:hover{
     position: relative;
     left: 0;
     right: 0;
-    top: 10px;
+    top: 25px;
     bottom: 0;
     margin: 5px;
     text-align: center;
@@ -111,8 +128,8 @@ a:hover{
     position: relative;
     left: 0;
     right: 0;   
-    top: 35px;
-    bottom: 0;
+    top: 55px;
+    bottom: 0px;
     margin: auto;
     background-color: #569967;
     border-radius: 12px;
@@ -130,11 +147,23 @@ a:hover{
 
 /* EDITAR BOTAO ARQUIVO */
 
-.btn_file{
-    width: 250px;
-    height: 250px;
+#endereco{
+    color: snow;
+    font-size: 10pt;
+    font-weight: lighter;
+}
+
+#capabt{
+    width: 180px;
+    height: 30px;
     position: relative;
+    left: 0;
+    right: 0;   
+    top: 0;
+    bottom: 0;
+    margin-bottom: 5px;
     background-color: #569967;
+    border-radius: 12px;
     border-style: solid;
     border-color: #76947e;
     border-width: 1px;
@@ -142,7 +171,7 @@ a:hover{
     transition: background-color 0.8s;
 }
 
-.btn_file:hover{
+#capabt:hover{
     background-color: rgb(255, 250, 250);
 
 }
