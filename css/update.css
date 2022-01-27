@@ -8,16 +8,6 @@ body{
     background-color: #02040f;
 }
 
-img{
-    width: 250px;
-    height: 250px;
-    transition: box-shadow 0.2s;
-}
-
-img:hover{
-    box-shadow: 0 0 6px rgba(255, 250, 250, 0.685);
-}
-
 header{
     position: fixed;
     top: 0;
@@ -83,38 +73,21 @@ a{
     padding-top: 17px;
     font-size: 15px;
     font-weight: bold;
-    transition: color 0.5s;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 a:hover{
     color: rgb(255, 250, 250);
-}
 
-.capa{
-    width: 250px;
-    height: 250px;
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 0px;
-    bottom: 0px;
-    margin: auto;
-    background-color:#02040f;
-    color: black;
 }
 
 
-
-.info{
-    color: #76947e;
-    font-size: 18px;
-    padding-top: 15px;
-    transition: color 0.5s;
-}
-
-.info:hover{
-    color: rgb(255, 250, 250);
+:placeholder-shown{
+    text-align: center;
+    background-color: black;
+    color: white;
+    outline: none;
 }
 
 .formulario{
@@ -122,11 +95,11 @@ a:hover{
     background-color: #02040f;
     width: 100%;
     height: 230px;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
-    top: 250px;
-    bottom: 0;
+    top: 10px;
+    bottom: 0px;
     margin: auto;
 }
 
@@ -136,7 +109,7 @@ a:hover{
     position: relative;
     left: 0;
     right: 0;
-    top: 10px;
+    top: 25px;
     bottom: 0;
     margin: 5px;
     text-align: center;
@@ -149,16 +122,15 @@ a:hover{
     font-size: 10pt;
 }
 
-.button{
-    display: flex;
-    justify-content: space-around;
-}
-
 .btn{
-    width: 120px;
+    width: 180px;
     height: 30px;
     position: relative;
-    margin-top: 20px;
+    left: 0;
+    right: 0;   
+    top: 55px;
+    bottom: 0px;
+    margin: auto;
     background-color: #569967;
     border-radius: 12px;
     border-style: solid;
@@ -171,4 +143,53 @@ a:hover{
 .btn:hover{
     background-color: rgb(255, 250, 250);
 
+}
+
+/* EDITAR BOTAO ARQUIVO */
+
+#endereco{
+    color: snow;
+    font-size: 10pt;
+    font-weight: lighter;
+}
+
+#capabt{
+    width: 180px;
+    height: 30px;
+    position: relative;
+    left: 0;
+    right: 0;   
+    top: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+    background-color: #569967;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: #76947e;
+    border-width: 1px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+#capabt:hover{
+    background-color: rgb(255, 250, 250);
+
+}
+
+.capa{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color:#02040f;
+    color: black;
+}
+
+img{
+    width: 150px;
+    height: 150px;
 }

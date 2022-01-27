@@ -19,10 +19,6 @@ O usuário deve inserir uma imagem da capa, o título, o nome da banda e o ano e
 
 ![read](https://github.com/lvlurilo/crud/blob/main/read.JPG)
 
-### Próximas implementações
-
-- Inserir alertas ao excluir e editar os álbuns;
-- Aperfeiçoar o botão de inserir e editar a imagem de capa do álbum;
 
 
 
